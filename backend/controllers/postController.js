@@ -7,7 +7,7 @@ const keyspace = 'default_keyspace';
 console.log(keyspace);
 async function getPostdata(req, res) {
     try{
-        const query = `SELECT * FROM ${keyspace}.${table_name} LIMIT 35`;
+        const query = `SELECT * FROM ${keyspace}.${table_name} LIMIT 2`;
         console.log(query);
         const result = await client.execute(query);
         const processed_data = result.rows.map((row)=>{
